@@ -12,7 +12,7 @@ public class MyDriverManager {
             driver = new ChromeDriver();
         } else if (expectedDriver.equals("ie")) {
             System.setProperty("webdriver.ie.driver", "drivers/IEDriverServer.exe");
-            driver=new InternetExplorerDriver();
+            driver = new InternetExplorerDriver();
         } else {
             System.out.println("Please define expected driver using next words:'chrome','ie' ");
         }
