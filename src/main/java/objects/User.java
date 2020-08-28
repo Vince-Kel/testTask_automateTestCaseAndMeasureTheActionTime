@@ -7,6 +7,6 @@ public class User {
 
     public User() {
         Random rd = new Random();
-        userEmail = "testuser" + rd.nextInt(1000) + "@mailinator.com";
+        userEmail = "testuser" + rd.nextInt(1000) + "@aol.com";
     }
 }

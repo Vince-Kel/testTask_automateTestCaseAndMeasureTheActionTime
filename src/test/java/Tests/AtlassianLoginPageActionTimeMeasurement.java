@@ -27,16 +27,16 @@ public class AtlassianLoginPageActionTimeMeasurement {
     @Test(description = "LoginPage test in 1 thread", threadPoolSize = 1, priority = 1)
     public void testForOneThread() {
         WebDriver ieDriver = null;
-        WebDriver chromeDdriver = null;
+        WebDriver chromeDriver = null;
         try {
-            chromeDdriver = getWebDriver("chrome");
+            chromeDriver = getWebDriver("chrome");
             User currentUser = UserGenerator.generateNewUser();
             String userEmail = currentUser.userEmail;
-            chromeDdriver.get("https://id.atlassian.com/login");
+            chromeDriver.get("https://id.atlassian.com/login");
             long startTimePosition = System.currentTimeMillis();
-            chromeDdriver.findElement(By.cssSelector("#username")).sendKeys(userEmail);
-            chromeDdriver.findElement(By.cssSelector("#login-submit")).click();
-            WebDriverWait wait = new WebDriverWait(chromeDdriver, 15);
+            chromeDriver.findElement(By.cssSelector("#username")).sendKeys(userEmail);
+            chromeDriver.findElement(By.cssSelector("#login-submit")).click();
+            WebDriverWait wait = new WebDriverWait(chromeDriver, 15);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
             long stopTimePosition = System.currentTimeMillis();
             chromeCommonTestRunExecutionTime += stopTimePosition - startTimePosition;
@@ -59,8 +59,8 @@ public class AtlassianLoginPageActionTimeMeasurement {
             if (ieDriver != null) {
                 ieDriver.quit();
             }
-            if (chromeDdriver != null) {
-                chromeDdriver.quit();
+            if (chromeDriver != null) {
+                chromeDriver.quit();
             }
         }
     }
@@ -68,16 +68,16 @@ public class AtlassianLoginPageActionTimeMeasurement {
     @Test(description = "LoginPage test in 2 threads", invocationCount = 2, threadPoolSize = 2, priority = 2)
     public void testForTwoThreads() {
         WebDriver ieDriver = null;
-        WebDriver chromeDdriver = null;
+        WebDriver chromeDriver = null;
         try {
-            chromeDdriver = getWebDriver("chrome");
+            chromeDriver = getWebDriver("chrome");
             User currentUser = UserGenerator.generateNewUser();
             String userEmail = currentUser.userEmail;
-            chromeDdriver.get("https://id.atlassian.com/login");
+            chromeDriver.get("https://id.atlassian.com/login");
             long startTimePosition = System.currentTimeMillis();
-            chromeDdriver.findElement(By.cssSelector("#username")).sendKeys(userEmail);
-            chromeDdriver.findElement(By.cssSelector("#login-submit")).click();
-            WebDriverWait wait = new WebDriverWait(chromeDdriver, 15);
+            chromeDriver.findElement(By.cssSelector("#username")).sendKeys(userEmail);
+            chromeDriver.findElement(By.cssSelector("#login-submit")).click();
+            WebDriverWait wait = new WebDriverWait(chromeDriver, 15);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
             long stopTimePosition = System.currentTimeMillis();
             chromeCommonTestRunExecutionTime += stopTimePosition - startTimePosition;
@@ -98,8 +98,8 @@ public class AtlassianLoginPageActionTimeMeasurement {
             if (ieDriver != null) {
                 ieDriver.quit();
             }
-            if (chromeDdriver != null) {
-                chromeDdriver.quit();
+            if (chromeDriver != null) {
+                chromeDriver.quit();
             }
         }
     }
@@ -107,16 +107,16 @@ public class AtlassianLoginPageActionTimeMeasurement {
     @Test(description = "LoginPage test in 5 threads", invocationCount = 5, threadPoolSize = 5, priority = 3)
     public void testForFiveThreads() {
         WebDriver ieDriver = null;
-        WebDriver chromeDdriver = null;
+        WebDriver chromeDriver = null;
         try {
-            chromeDdriver = getWebDriver("chrome");
+            chromeDriver = getWebDriver("chrome");
             User currentUser = UserGenerator.generateNewUser();
             String userEmail = currentUser.userEmail;
-            chromeDdriver.get("https://id.atlassian.com/login");
+            chromeDriver.get("https://id.atlassian.com/login");
             long startTimePosition = System.currentTimeMillis();
-            chromeDdriver.findElement(By.cssSelector("#username")).sendKeys(userEmail);
-            chromeDdriver.findElement(By.cssSelector("#login-submit")).click();
-            WebDriverWait wait = new WebDriverWait(chromeDdriver, 15);
+            chromeDriver.findElement(By.cssSelector("#username")).sendKeys(userEmail);
+            chromeDriver.findElement(By.cssSelector("#login-submit")).click();
+            WebDriverWait wait = new WebDriverWait(chromeDriver, 15);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
             long stopTimePosition = System.currentTimeMillis();
             chromeCommonTestRunExecutionTime += stopTimePosition - startTimePosition;
@@ -137,8 +137,8 @@ public class AtlassianLoginPageActionTimeMeasurement {
             if (ieDriver != null) {
                 ieDriver.quit();
             }
-            if (chromeDdriver != null) {
-                chromeDdriver.quit();
+            if (chromeDriver != null) {
+                chromeDriver.quit();
             }
         }
     }
@@ -146,16 +146,16 @@ public class AtlassianLoginPageActionTimeMeasurement {
     @Test(description = "LoginPage test in 10 threads", invocationCount = 10, threadPoolSize = 10, priority = 4)
     public void testForTenThreads() {
         WebDriver ieDriver = null;
-        WebDriver chromeDdriver = null;
+        WebDriver chromeDriver = null;
         try {
-            chromeDdriver = getWebDriver("chrome");
+            chromeDriver = getWebDriver("chrome");
             User currentUser = UserGenerator.generateNewUser();
             String userEmail = currentUser.userEmail;
-            chromeDdriver.get("https://id.atlassian.com/login");
+            chromeDriver.get("https://id.atlassian.com/login");
             long startTimePosition = System.currentTimeMillis();
-            chromeDdriver.findElement(By.cssSelector("#username")).sendKeys(userEmail);
-            chromeDdriver.findElement(By.cssSelector("#login-submit")).click();
-            WebDriverWait wait = new WebDriverWait(chromeDdriver, 15);
+            chromeDriver.findElement(By.cssSelector("#username")).sendKeys(userEmail);
+            chromeDriver.findElement(By.cssSelector("#login-submit")).click();
+            WebDriverWait wait = new WebDriverWait(chromeDriver, 15);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
             long stopTimePosition = System.currentTimeMillis();
             chromeCommonTestRunExecutionTime += stopTimePosition - startTimePosition;
@@ -176,8 +176,8 @@ public class AtlassianLoginPageActionTimeMeasurement {
             if (ieDriver != null) {
                 ieDriver.quit();
             }
-            if (chromeDdriver != null) {
-                chromeDdriver.quit();
+            if (chromeDriver != null) {
+                chromeDriver.quit();
             }
         }
     }
